@@ -1,0 +1,29 @@
+* haskcross-template
+
+A stack template to quickly jumpstart cross platform haskell development.
+
+Currently supported platforms:
+
+- android
+
+* Prerequisites
+
+1. llvm & ghc cross compiler (download from http://hackage.mobilehaskell.org)
+2. install [[https://github.com/zw3rk/toolchain-wrapper][toolchan wrapper]]
+3. for android, libiconv to be compiled using https://github.com/zw3rk/ghc-build-scripts
+
+* Usage
+
+** Creating a new project
+
+#+BEGIN_SRC sh
+stack new <proj-name> https://raw.githubusercontent.com/lynnard/haskcross-template/new/haskcross.hsfiles
+#+END_SRC
+
+You can also clone this repository somewhere and point stack to use the local copy of the template.
+
+** Building for Android
+
+#+BEGIN_SRC sh
+make android
+#+END_SRC
